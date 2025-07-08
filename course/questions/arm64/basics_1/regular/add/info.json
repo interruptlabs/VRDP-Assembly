@@ -1,0 +1,14 @@
+{
+    "uuid": "9111c450-7ded-4158-942f-aee2051a6076",
+    "type": "v3",
+    "title": "Add",
+    "topic": "ARM64 - Basics 1",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "uuid": "9111c450-7ded-4158-942f-aee2051a6076",
+    "type": "Homework",
+    "title": "Basics 1",
+    "set": "Quiz",
+    "module": "ARM64",
+    "number": "A64-B1",
+    "allowAccess": [
+        {
+            "active": true
+        }
+    ],
+    "zones": [
+        {
+            "title": "Regular",
+            "advanceScorePerc": 100,
+            "questions": [
+                {
+                    "id": "arm64/basics_1/regular/add",
+                    "points": 1
+                },
+                {
+                    "id": "arm64/basics_1/regular/subtract",
+                    "points": 1
+                },
+                {
+                    "id": "arm64/basics_1/regular/multiply",
+                    "points": 1
+                },
+                {
+                    "id": "arm64/basics_1/regular/divide",
+                    "points": 1
+                },
+                {
+                    "id": "arm64/basics_1/regular/puzzle_1",
+                    "points": 1
+                },
+                {
+                    "id": "arm64/basics_1/regular/puzzle_2",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "title": "Bonus",
+            "questions": [
+                {
+                    "id": "arm64/basics_1/bonus/puzzle_3",
+                    "points": 1
+                }
+            ]
+        }
+    ]
+}

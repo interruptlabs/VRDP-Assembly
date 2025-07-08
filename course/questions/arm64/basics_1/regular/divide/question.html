@@ -1,0 +1,19 @@
+<pl-question-panel>
+<markdown>
+What is the value of `w2` and `w3` after running the following assembly code? Give both answers as unsigned.
+
+Initial values:
+- `w0` - `20`
+- `w1` - `0xfffffffc`
+</markdown>
+<pl-code language="gas" style-name="dracula">
+udiv w2, w0, w1
+sdiv w3, w0, w1
+</pl-code>
+<pl-integer-input answers-name="w2" label="w2:" base="0"></pl-integer-input>
+<pl-integer-input answers-name="w3" label="w3:" base="0"></pl-integer-input>
+</pl-question-panel>
+
+<pl-submission-panel>
+<pre>{{feedback.consolidated}}</pre>
+</pl-submission-panel>

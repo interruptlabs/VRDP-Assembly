@@ -144,9 +144,9 @@ class ARM64Grader(GenericGrader, ABC):
 
         lines = [
             f"pc:       0x{pc_value:016x}",
-            f"fp (x29): 0x{fp_value:016x}",
             f"lr (x30): 0x{lr_value:016x}",
-            f"sp (x31): 0x{sp_value:016x}",
+            f"sp;     : 0x{sp_value:016x}",
+            f"fp (x29): 0x{fp_value:016x}",
         ]
 
         nzcv = uc.reg_read(UC_ARM64_REG_NZCV)

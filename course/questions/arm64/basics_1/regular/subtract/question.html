@@ -1,0 +1,18 @@
+<pl-question-panel>
+<markdown>
+What is the value of `x2` after running the following assembly code?
+
+Initial values:
+
+- `x0` - `27`
+- `x1` - `46`
+</markdown>
+<pl-code language="gas" style-name="dracula">
+sub x2, x1, x0
+</pl-code>
+<pl-integer-input answers-name="x2" label="x2:" base="0"></pl-integer-input>
+</pl-question-panel>
+
+<pl-submission-panel>
+<pre>{{feedback.consolidated}}</pre>
+</pl-submission-panel>

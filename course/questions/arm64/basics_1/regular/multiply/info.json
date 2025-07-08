@@ -1,0 +1,15 @@
+{
+    "uuid": "efdc2a62-0ed1-4953-9484-fc2b9a3439e7",
+    "type": "v3",
+    "title": "Multiply",
+    "topic": "ARM64 - Basics 1",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}
+

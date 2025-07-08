@@ -1,0 +1,14 @@
+{
+    "uuid": "92654547-0da8-46ba-a8c8-bbc53491fc1c",
+    "type": "v3",
+    "title": "Puzzle 1",
+    "topic": "ARM64 - Basics 1",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}
