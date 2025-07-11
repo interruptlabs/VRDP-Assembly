@@ -1,10 +1,10 @@
 {
     "uuid": "0562433f-8303-43e6-9d4f-c95125cbffbd",
     "type": "Homework",
-    "title": "Memory and Stack 1",
+    "title": "ARM64 - Memory and Stack 1",
     "set": "Quiz",
     "module": "ARM64",
-    "number": "ARM64-MS1",
+    "number": "A64-MS1",
     "allowAccess": [
         {
             "active": true

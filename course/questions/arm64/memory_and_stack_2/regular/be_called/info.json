@@ -1,0 +1,14 @@
+{
+    "uuid": "387d80be-abbe-40c2-8cb9-6bb3bd7e8ad0",
+    "type": "v3",
+    "title": "Be Called",
+    "topic": "ARM64 - Memory and Stack 2",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "uuid": "16f32cc2-339c-417a-8468-1cbbfe904076",
+    "type": "v3",
+    "title": "Small and Odd",
+    "topic": "ARM64 - Control Flow 2",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

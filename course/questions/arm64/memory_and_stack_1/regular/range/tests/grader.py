@@ -22,6 +22,6 @@ class Grader(ARM64Grader):
         solved = uc.mem_read(0x20000, 16) == bytes(range(16))
 
         return solved, [
-            ("Registers", Grader.register_snapshot(uc))
+            ("Registers", Grader.register_snapshot(uc)),
             ("Memory", Grader.memory_snapshot(uc, 0x20000, 0x20010))
         ]

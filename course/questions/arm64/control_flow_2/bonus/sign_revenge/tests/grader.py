@@ -15,33 +15,37 @@ class Grader(ARM64Grader):
             MaximumCountFilter(4)
         )
 
-
         pre = """
-        call sign
-        b end
+            bl sign
+            b end
         """
 
         post = """
-        movz x0, #0
+            movz x0, #0
         end:
         """
 
         code = Grader.assemble(pre + answer + post)
 
         solved = True
-        for i in range(10):
+        for _ in range(10):
             uc = Grader.setup_unicorn()
             
-            x0 = random.randint(-100, 100)
+            if random.random() < 0.8:
+                x0_ = random.randint(-100, 100)
+            else:
+                x0_ = 0
+
+            x0 = int.from_bytes(x0_.to_bytes(8, "little", signed=True), "little", signed=False)
 
             uc.reg_write(UC_ARM64_REG_X0, x0)
             
             Grader.run_unicorn(code, uc)
 
             expected = 0
-            if x0 > 0:
+            if x0_ > 0:
                 expected = 1
-            if x0 < 0:
+            if x0_ < 0:
                 expected = 0xffffffffffffffff
             
             if uc.reg_read(UC_ARM64_REG_X0) != expected:

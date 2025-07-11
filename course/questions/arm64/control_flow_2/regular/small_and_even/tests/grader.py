@@ -16,16 +16,16 @@ class Grader(ARM64Grader):
         )
 
         solved = True
-        for i in range(10):
+        for _ in range(10):
             uc = Grader.setup_unicorn()
 
-            x1 = random.randint(0, 200)
+            x1 = random.randint(0, 60)
 
             uc.reg_write(UC_ARM64_REG_X1, x1)
         
             Grader.run_unicorn(code, uc)
         
-            if uc.reg_read(UC_ARM64_REG_X0) != (x1 < 100 and x1 % 2 == 0):
+            if uc.reg_read(UC_ARM64_REG_X0) != (x1 < 30 and x1 % 2 == 0):
                 solved = False
                 break
 

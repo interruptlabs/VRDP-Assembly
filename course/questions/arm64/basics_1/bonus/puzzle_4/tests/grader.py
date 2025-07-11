@@ -2,6 +2,8 @@ from grader import ARM64Grader, MaximumCountFilter
 
 from unicorn.arm64_const import *
 
+import random
+
 
 class Grader(ARM64Grader):
     @staticmethod
@@ -14,12 +16,15 @@ class Grader(ARM64Grader):
         )
 
         solved = True
-        for i in range(10):
+        for _ in range(10):
             uc = Grader.setup_unicorn()
             
             x0 = random.randint(0, 0xffffffffffffffff)
-            x1 = random.randint(0, 0xffffffffffffffff)
-            
+            if random.random() < 0.5:
+                x1 = random.randint(0, 0xffffffffffffffff)
+            else:
+                x1 = 0
+
             uc.reg_write(UC_ARM64_REG_X0, x0)
             uc.reg_write(UC_ARM64_REG_X1, x1)
             

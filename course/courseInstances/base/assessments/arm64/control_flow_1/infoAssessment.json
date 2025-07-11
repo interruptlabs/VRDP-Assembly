@@ -1,10 +1,10 @@
 {
     "uuid": "f34e1c9c-3af0-4d17-8119-c5e86127339a",
     "type": "Homework",
-    "title": "Control Flow 1",
+    "title": "ARM64 - Control Flow 1",
     "set": "Quiz",
     "module": "ARM64",
-    "number": "ARM64-CF1",
+    "number": "A64-CF1",
     "allowAccess": [
         {
             "active": true

@@ -1,0 +1,14 @@
+{
+    "uuid": "5820d7b0-b107-4f11-b5e5-d6c1a7025906",
+    "type": "v3",
+    "title": "Sort",
+    "topic": "ARM64 - Memory and Stack 2",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

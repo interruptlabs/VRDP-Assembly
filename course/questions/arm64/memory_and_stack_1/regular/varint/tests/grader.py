@@ -11,7 +11,7 @@ class Grader(ARM64Grader):
         code = Grader.assemble(answer)
         
         solved = True
-        for i in range(10):
+        for _ in range(10):
             uc = Grader.setup_unicorn()
 
             varint_int = random.randint(0, 2**random.randint(1, 64) - 1)

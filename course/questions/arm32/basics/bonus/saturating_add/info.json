@@ -1,0 +1,14 @@
+{
+    "uuid": "81531cfd-d868-4446-b39d-4c486ab3b218",
+    "type": "v3",
+    "title": "Saturating Add",
+    "topic": "ARM32 - ARM32 - Basics",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

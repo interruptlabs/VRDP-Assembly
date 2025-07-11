@@ -1,0 +1,53 @@
+<pl-question-panel>
+<markdown>
+What is the return value of the following function?
+
+Give answers when the first argument is:
+- `19`
+- `89`
+- `231`
+
+The second and third arguments will always be `0x1000` and `0x1007`.
+
+Memory:
+```
+0x1000: 02 13 27 46 55 92 a8 e7 00 00 00 00 00 00 00 00
+```
+
+</markdown>
+<pl-code language="gas" style-name="dracula">
+puzzle:
+    stp     x29, x30, [sp, #-16]!
+    mov     x29, sp
+    cmp     x1, x2
+    b.hs    puzzle_0
+    add     x3, x1, x2
+    lsr     x3, x3, #1
+    ldrb    w4, [x3]
+    cmp     w4, w0
+    b.eq    puzzle_2
+    b.hi    puzzle_1
+    add     x1, x3, #1
+    bl      puzzle
+    b       puzzle_3
+puzzle_1:
+    mov     x2, x3
+    bl      puzzle
+    b       puzzle_3
+puzzle_2:
+    mov     x0, x3
+    b       puzzle_3
+puzzle_0:
+    mov     x0, #0
+puzzle_3:
+    ldp     x29, x30, [sp], #16
+    ret
+</pl-code>
+<pl-integer-input answers-name="When 19" label="When 19:" base="0"></pl-integer-input>
+<pl-integer-input answers-name="When 89" label="When 89:" base="0"></pl-integer-input>
+<pl-integer-input answers-name="When 231" label="When 231:" base="0"></pl-integer-input>
+</pl-question-panel>
+
+<pl-submission-panel>
+<pre>{{feedback.consolidated}}</pre>
+</pl-submission-panel>
