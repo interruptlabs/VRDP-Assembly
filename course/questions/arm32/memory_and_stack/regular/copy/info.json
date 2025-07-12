@@ -1,0 +1,14 @@
+{
+    "uuid": "e08956ba-52c8-4b39-8bcb-f601abb2264f",
+    "type": "v3",
+    "title": "Copy",
+    "topic": "ARM32 - ARM32 - Memory and Stack",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "uuid": "e9d84e10-db50-4fc0-b0d7-f35bb023a9c2",
+    "type": "v3",
+    "title": "Conditional Instructions (THUMB)",
+    "topic": "ARM32 - ARM32 - Control Flow",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

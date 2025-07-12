@@ -2,11 +2,13 @@
 <markdown>
 **ARM Mode**
 
-Get `r0` to equal `0xdeadbeef`.
+If `r1` is `42`, set `r0` to `0xdeadbeef`. Otherwise, set `r0` to `0xbaadc0de`.
+
+Initial values:
+- `r1` - Random anything
 
 Constraints:
-- You can only use the `mov` and `movt` instructions.
-- You can only use two instructions.
+- You can only use six instructions.
 </markdown>
 <pl-file-editor
     file-name="answer.s"

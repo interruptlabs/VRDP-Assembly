@@ -1,0 +1,59 @@
+<pl-question-panel>
+<markdown>
+What is the return value after calling `func_2(3, 4)`?
+</markdown>
+<pl-code language="gas" style-name="dracula">
+func_0:
+    add r0, r0, r1
+    bx lr
+
+func_1:
+    push {fp, lr}
+    mov fp, sp
+    sub sp, sp, #8
+    mov r2, #0
+func_1_0:
+    cmp r1, #0
+    beq func_1_1
+    str r0, [sp, #4]
+    str r1, [sp]
+    mov r1, r2
+    bl func_0
+    mov r2, r0
+    ldr r0, [sp, #4]
+    ldr r1, [sp]
+    sub r1, r1, #1
+    b func_1_0
+func_1_1:
+    mov r0, r2
+    mov sp, fp
+    pop {fp, lr}
+
+func_2:
+    push {fp, lr}
+    mov fp, sp
+    sub sp, sp, #8
+    mov r2, #1
+func_2_0:
+    cmp r1, #0
+    beq func_2_1
+    str r0, [sp, #4]
+    str r1, [sp]
+    mov r1, r2
+    bl func_1
+    mov r2, r0
+    ldr r0, [sp, #4]
+    ldr r1, [sp]
+    sub r1, r1, #1
+    b func_2_0
+func_2_1:
+    mov r0, r2
+    mov sp, fp
+    pop {fp, lr}
+</pl-code>
+<pl-integer-input answers-name="Answer" label="Answer:" base="0"></pl-integer-input>
+</pl-question-panel>
+
+<pl-submission-panel>
+<pre>{{feedback.consolidated}}</pre>
+</pl-submission-panel>

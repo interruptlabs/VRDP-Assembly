@@ -1,0 +1,14 @@
+{
+    "uuid": "8ecb9a1a-4144-4531-9ce5-ed592a23a3de",
+    "type": "v3",
+    "title": "Be Called",
+    "topic": "ARM32 - ARM32 - Memory and Stack",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

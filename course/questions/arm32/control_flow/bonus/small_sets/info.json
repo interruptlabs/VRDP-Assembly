@@ -1,0 +1,14 @@
+{
+    "uuid": "4b6fd8a1-0de6-4afe-8a05-5dfff9efc5cd",
+    "type": "v3",
+    "title": "Small Sets",
+    "topic": "ARM32 - ARM32 - Control Flow",
+    "gradingMethod": "External",
+    "singleVariant": true,
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "assembly-grader",
+        "timeout": 10
+    }
+}

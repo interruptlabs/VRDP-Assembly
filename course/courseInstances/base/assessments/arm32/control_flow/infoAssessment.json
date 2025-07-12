@@ -1,0 +1,42 @@
+{
+    "uuid": "f2906611-0a69-4f23-8628-78813302d4cc",
+    "type": "Homework",
+    "title": "ARM32 - Control Flow",
+    "set": "Quiz",
+    "module": "ARM32",
+    "number": "A32-CF",
+    "allowAccess": [
+        {
+            "active": true
+        }
+    ],
+    "zones": [
+        {
+            "title": "Regular",
+            "advanceScorePerc": 100,
+            "questions": [
+                {
+                    "id": "arm32/control_flow/regular/conditional_instructions_arm",
+                    "points": 1
+                },
+                {
+                    "id": "arm32/control_flow/regular/conditional_instructions_thumb",
+                    "points": 1
+                },
+                {
+                    "id": "arm32/control_flow/regular/exchange",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "title": "Bonus",
+            "questions": [
+                {
+                    "id": "arm32/control_flow/bonus/small_sets",
+                    "points": 1
+                }
+            ]
+        }
+    ]
+}

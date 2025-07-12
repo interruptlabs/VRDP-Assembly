@@ -2,11 +2,21 @@
 <markdown>
 **ARM Mode**
 
-Get `r0` to equal `0xdeadbeef`.
+Create a function equivalent to the following C code:
 
-Constraints:
-- You can only use the `mov` and `movt` instructions.
-- You can only use two instructions.
+```c
+struct triple {
+    uint32_t a;
+    uint32_t b;
+    uint32_t c;
+    uint32_t d;
+};
+
+uint32_t be_called(uint32_t a, uint32_t b, uint32_t c, uint32_t d, uint32_t e, uint32_t f) {
+    struct triple t = call_me_1(d, c, b, a, e, f);
+    return call_me_2(t.d, t.c, t.b, t.a);
+}
+```
 </markdown>
 <pl-file-editor
     file-name="answer.s"

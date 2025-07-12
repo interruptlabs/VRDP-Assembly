@@ -2,10 +2,12 @@
 <markdown>
 **ARM Mode**
 
-Get `r0` to equal `0xdeadbeef`.
+Copy `16` bytes from `0x20000` to `0x20010`.
+
+Initial values:
+- `r0` - `0x20000`
 
 Constraints:
-- You can only use the `mov` and `movt` instructions.
 - You can only use two instructions.
 </markdown>
 <pl-file-editor

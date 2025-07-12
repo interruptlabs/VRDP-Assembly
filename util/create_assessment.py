@@ -15,7 +15,7 @@ def create_assessment(module, assessment, title, number):
         "arm64": "A64",
         "arm32": "A32",
         "x64": "X64",
-    }
+    }[module]
     
     assessment_info = {
         "uuid": assessment_uuid,

@@ -1,0 +1,40 @@
+<pl-question-panel>
+<markdown>
+What is the return value of the following calls?
+
+- `func_0("radar")`
+- `func_0("radio")`
+- `func_0("reviver")`
+</markdown>
+<pl-code language="gas" style-name="dracula">
+func_0:
+    mov r1, #0
+func_0_loop:
+    ldrb r2, [r0, r1]
+    cmp r2, #0
+    beq func_1
+    add r1, r1, #1
+    b func_0_loop
+
+func_1:
+    cmp r1, #1
+    movls r0, #1
+    bxls lr
+    ldrb r2, [r0]
+    sub r1, r1, #1
+    ldrb r3, [r0, r1]
+    cmp r2, r3
+    movne r0, #0
+    bxne lr
+    sub r1, r1, #1
+    add r0, r0, #1
+    b func_1
+</pl-code>
+<pl-integer-input answers-name="radio" label="radio:" base="0"></pl-integer-input>
+<pl-integer-input answers-name="reviver" label="reviver:" base="0"></pl-integer-input>
+<pl-integer-input answers-name="radar" label="radar:" base="0"></pl-integer-input>
+</pl-question-panel>
+
+<pl-submission-panel>
+<pre>{{feedback.consolidated}}</pre>
+</pl-submission-panel>

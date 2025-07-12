@@ -1,0 +1,46 @@
+{
+    "uuid": "7efaa3a2-d7b4-48e0-b420-9f18d18794ac",
+    "type": "Homework",
+    "title": "ARM32 - Memory and Stack",
+    "set": "Quiz",
+    "module": "ARM32",
+    "number": "A32-MS",
+    "allowAccess": [
+        {
+            "active": true
+        }
+    ],
+    "zones": [
+        {
+            "title": "Regular",
+            "advanceScorePerc": 100,
+            "questions": [
+                {
+                    "id": "arm32/memory_and_stack/regular/load_multiple",
+                    "points": 1
+                },
+                {
+                    "id": "arm32/memory_and_stack/regular/copy",
+                    "points": 1
+                },
+                {
+                    "id": "arm32/memory_and_stack/regular/puzzle_1",
+                    "points": 1
+                },
+                {
+                    "id": "arm32/memory_and_stack/regular/be_called",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "title": "Bonus",
+            "questions": [
+                {
+                    "id": "arm32/memory_and_stack/bonus/tail_call",
+                    "points": 1
+                }
+            ]
+        }
+    ]
+}

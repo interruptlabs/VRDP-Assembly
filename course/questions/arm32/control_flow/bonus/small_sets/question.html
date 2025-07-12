@@ -1,12 +1,23 @@
 <pl-question-panel>
 <markdown>
-**ARM Mode**
+**ARM Mode**`
 
-Get `r0` to equal `0xdeadbeef`.
+Set `r0` based on the value of `r1` as follows:
+- `0` - `0x17`
+- `1` - `0x60`
+- `2` - `0xfa`
+- `3` - `0xd0`
+- `4` - `0xb0`
+- `5` - `0xad`
+- `6` - `0xed`
+- Else - `0x50`
+
+Initial values:
+- `r0` - `0`
+- `r1` - Random anything
 
 Constraints:
-- You can only use the `mov` and `movt` instructions.
-- You can only use two instructions.
+- You can only use eleven instructions.
 </markdown>
 <pl-file-editor
     file-name="answer.s"
