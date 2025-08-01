@@ -21,4 +21,3 @@ Navigate:
 Click the dropdown in the top right and select "Student view without access restrictions".
 
 Note: Terminating the `run.sh` script will discard all progress.
-

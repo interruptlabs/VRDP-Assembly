@@ -16,4 +16,5 @@ sudo docker run -it --rm -p 3000:3000 \
     -e HOST_JOBS_DIR="$WD/.runtime/jobs" \
     -v /var/run/docker.sock:/var/run/docker.sock \
     --add-host=host.docker.internal:172.17.0.1 \
-    prairielearn/prairielearn
+    prairielearn/prairielearn \
+    bash -c 'rm -r /PrairieLearn/*Course && /PrairieLearn/scripts/init.sh'
