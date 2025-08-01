@@ -1,3 +1,9 @@
+This is the Assembly training from our Vulnerability Researcher Development Program.
+
+Video: https://youtu.be/c7utLPD1aKg
+
+# Exercise Setup
+
 To run the exercise system you will need a Linux system with Docker installed. On Windows you can use WSL.
 
 Run:
