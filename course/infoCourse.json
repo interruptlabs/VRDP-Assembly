@@ -1,7 +1,7 @@
 {
     "uuid": "15152b4b-c067-4bdf-8abd-d70031d6fe92",
     "name": "ASM 101",
-    "title": "Basics of ARM64, ARM32 & x86-64 Assembly",
+    "title": "Basics of ARM64, ARM32 and X64 Assembly",
     "assessmentSets": [],
     "assessmentModules": [
         {
@@ -14,7 +14,7 @@
         },
         {
             "name": "X64",
-            "heading": "x86-64"
+            "heading": "X64"
         }
     ],
     "topics": [],
