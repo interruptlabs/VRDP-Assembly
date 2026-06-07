@@ -30,16 +30,16 @@
                 {
                     "id": "x64/memory_and_stack/regular/move_to_memory",
                     "points": 1
-                },
-                {
-                    "id": "x64/memory_and_stack/regular/be_called",
-                    "points": 1
                 }
             ]
         },
         {
             "title": "Bonus",
             "questions": [
+                {
+                    "id": "x64/memory_and_stack/bonus/be_called",
+                    "points": 1
+                },
                 {
                     "id": "x64/memory_and_stack/bonus/bracket_match",
                     "points": 1
