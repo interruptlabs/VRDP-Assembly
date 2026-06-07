@@ -27,7 +27,7 @@ func_1_0:
 func_1_1:
     mov r0, r2
     mov sp, fp
-    pop {fp, lr}
+    pop {fp, pc}
 
 func_2:
     push {fp, lr}
@@ -49,7 +49,7 @@ func_2_0:
 func_2_1:
     mov r0, r2
     mov sp, fp
-    pop {fp, lr}
+    pop {fp, pc}
 </pl-code>
 <pl-integer-input answers-name="Answer" label="Answer:" base="0"></pl-integer-input>
 </pl-question-panel>
