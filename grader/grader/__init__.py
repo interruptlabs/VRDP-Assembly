@@ -1,12 +1,52 @@
 from abc import ABC, abstractmethod
+from pathlib import Path
 from typing import ClassVar
+import subprocess
+import tempfile
 
 from capstone import Cs, CsInsn, CS_ARCH_ARM64, CS_MODE_ARM, CS_MODE_LITTLE_ENDIAN, CS_ARCH_ARM, CS_MODE_THUMB, CS_ARCH_X86, CS_MODE_64
-from keystone import Ks, KS_ARCH_ARM64, KS_MODE_ARM, KS_MODE_LITTLE_ENDIAN, KS_ARCH_ARM, KS_MODE_THUMB, KS_ARCH_X86, KS_MODE_64
 from unicorn import Uc, UC_ARCH_ARM64, UC_MODE_ARM, UC_ARCH_ARM, UC_MODE_THUMB, UC_ARCH_X86, UC_MODE_64
 from unicorn.arm64_const import *
 from unicorn.arm_const import *
 from unicorn.x86_const import *
+
+
+class AssemblyError(Exception):
+    pass
+
+
+def _assemble(assembly: str, triple: str, base: int, *arguments: str) -> bytes:
+    with tempfile.TemporaryDirectory() as directory:
+        (Path(directory) / "answer.s").write_text(assembly)
+
+        assembled = subprocess.run(
+            ["llvm-mc", f"--triple={triple}", *arguments, "--filetype=obj", "answer.s", "-o", "answer.o"],
+            cwd=directory,
+            capture_output=True,
+            text=True
+        )
+
+        if assembled.returncode != 0:
+            raise AssemblyError(assembled.stderr)
+
+        linked = subprocess.run(
+            ["ld.lld", f"-Ttext={base:#x}", "-e", "0", "answer.o", "-o", "answer.elf"],
+            cwd=directory,
+            capture_output=True,
+            text=True
+        )
+
+        if linked.returncode != 0:
+            raise AssemblyError(linked.stderr)
+
+        subprocess.run(
+            ["llvm-objcopy", "-O", "binary", "--only-section=.text", "answer.elf", "answer.bin"],
+            cwd=directory,
+            check=True
+        )
+
+        return (Path(directory) / "answer.bin").read_bytes()
+
 
 class Filter(ABC):
     @abstractmethod
@@ -86,12 +126,7 @@ class ARM64Grader(GenericGrader, ABC):
 
     @staticmethod
     def assemble(assembly: str) -> bytes:
-        ks = Ks(
-            KS_ARCH_ARM64,
-            KS_MODE_LITTLE_ENDIAN
-        )
-
-        return ks.asm(assembly, addr=ARM64Grader.TEXT_BASE, as_bytes=True)[0]
+        return _assemble(assembly, "aarch64-linux-gnu", ARM64Grader.TEXT_BASE)
 
 
     @staticmethod
@@ -278,12 +313,7 @@ class ARM32Grader(GenericGrader, ABC):
 
     @staticmethod
     def assemble(assembly: str) -> bytes:
-        ks = Ks(
-            KS_ARCH_ARM,
-            KS_MODE_ARM | KS_MODE_LITTLE_ENDIAN
-        )
-
-        return ks.asm(assembly, addr=ARM32Grader.TEXT_BASE, as_bytes=True)[0]
+        return _assemble(assembly, "armv7-linux-gnueabi", ARM32Grader.TEXT_BASE)
 
 
     @staticmethod
@@ -444,12 +474,7 @@ class ARM32Grader(GenericGrader, ABC):
 class THUMB32Grader(ARM32Grader):
     @staticmethod
     def assemble(assembly: str) -> bytes:
-        ks = Ks(
-            KS_ARCH_ARM,
-            KS_MODE_THUMB | KS_MODE_LITTLE_ENDIAN
-        )
-
-        return ks.asm(assembly, addr=THUMB32Grader.TEXT_BASE, as_bytes=True)[0]
+        return _assemble(assembly, "thumbv7-linux-gnueabi", THUMB32Grader.TEXT_BASE)
 
 
     @staticmethod
@@ -507,12 +532,7 @@ class X64Grader(GenericGrader, ABC):
 
     @staticmethod
     def assemble(assembly: str) -> bytes:
-        ks = Ks(
-            KS_ARCH_X86,
-            KS_MODE_64
-        )
-
-        return ks.asm(assembly, addr=X64Grader.TEXT_BASE, as_bytes=True)[0]
+        return _assemble(assembly, "x86_64-linux-gnu", X64Grader.TEXT_BASE, "--x86-asm-syntax=intel")
 
 
     @staticmethod

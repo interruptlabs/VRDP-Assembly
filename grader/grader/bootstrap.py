@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 from traceback import format_exception
 
+from grader import AssemblyError
+
 
 def main():
     results_directory_path = Path("/grade/results")
@@ -31,6 +33,13 @@ def main():
             "tests": tests
         }))
         
+    except AssemblyError as e:
+        results_file_path.write_text(json.dumps({
+            "gradable": True,
+            "score": 0,
+            "output": str(e)
+        }))
+
     except Exception as e:
         results_file_path.write_text(json.dumps({
             "gradable": True,
