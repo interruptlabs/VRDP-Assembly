@@ -1,0 +1,8 @@
+{
+    "uuid": "{uuid}",
+    "type": "v3",
+    "title": "{title}",
+    "topic": "{topic}",
+    "singleVariant": true,
+    "showCorrectAnswer": false
+}
