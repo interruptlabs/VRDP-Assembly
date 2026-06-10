@@ -368,9 +368,9 @@ def _ace_rules(arch: str, arch_patterns: dict[str, str]) -> dict:
 
 
 ACE_MODES = {
-    "arm64": ("assembly_arm64", "//"),
-    "arm32": ("assembly_arm32", "@"),
-    "x64": ("assembly_x86", "#"),
+    "arm64": "assembly_arm64",
+    "arm32": "assembly_arm32",
+    "x64": "assembly_x86",
 }
 
 ACE_TEMPLATE = """\
@@ -392,7 +392,9 @@ ACE_TEMPLATE = """\
   oop.inherits(Mode, TextMode);
 
   (function () {{
-    this.lineCommentStart = '{line_comment}';
+    // llvm-mc accepts // and /* */ on all targets, so comment toggling is
+    // uniform across the three dialects (matching the question templates).
+    this.lineCommentStart = '//';
     this.blockComment = {{ start: '/*', end: '*/' }};
     this.$id = 'ace/mode/{name}';
   }}).call(Mode.prototype);
@@ -404,14 +406,13 @@ ACE_TEMPLATE = """\
 
 def _write_ace_modes(patterns: dict) -> list[Path]:
     written = []
-    for arch, (name, line_comment) in ACE_MODES.items():
+    for arch, name in ACE_MODES.items():
         rules = json.dumps(_ace_rules(arch, patterns[arch]), indent=2)
         # Indent the rules object to sit inside the highlight-rules function.
         rules = rules.replace("\n", "\n    ")
         content = ACE_TEMPLATE.format(
             header=GENERATED_JS_HEADER.format(arch=arch),
             name=name,
-            line_comment=line_comment,
             rules=rules,
         )
         path = ACE_MODE_DIR / f"mode-{name}.js"

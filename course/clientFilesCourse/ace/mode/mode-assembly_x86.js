@@ -130,7 +130,9 @@ ace.define('ace/mode/assembly_x86', [], function (require, exports, module) {
   oop.inherits(Mode, TextMode);
 
   (function () {
-    this.lineCommentStart = '#';
+    // llvm-mc accepts // and /* */ on all targets, so comment toggling is
+    // uniform across the three dialects (matching the question templates).
+    this.lineCommentStart = '//';
     this.blockComment = { start: '/*', end: '*/' };
     this.$id = 'ace/mode/assembly_x86';
   }).call(Mode.prototype);
