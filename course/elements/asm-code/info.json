@@ -1,0 +1,6 @@
+{
+    "controller": "asm-code.py",
+    "dependencies": {
+        "elementStyles": ["asm-code.css"]
+    }
+}

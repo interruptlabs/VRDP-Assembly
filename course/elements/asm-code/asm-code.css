@@ -1,0 +1,11 @@
+.asm-code > div {
+  background: var(--asm-code-background-color, transparent);
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+.asm-code pre {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  line-height: 125%;
+}

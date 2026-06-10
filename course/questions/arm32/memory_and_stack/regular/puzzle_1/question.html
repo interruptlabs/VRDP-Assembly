@@ -2,7 +2,7 @@
 <markdown>
 What is the return value after calling `func_2(3, 4)`?
 </markdown>
-<pl-code language="gas" style-name="dracula">
+<asm-code language="arm32">
 func_0:
     add r0, r0, r1
     bx lr
@@ -50,7 +50,7 @@ func_2_1:
     mov r0, r2
     mov sp, fp
     pop {fp, pc}
-</pl-code>
+</asm-code>
 <pl-integer-input answers-name="Answer" label="Answer:" base="0"></pl-integer-input>
 </pl-question-panel>
 

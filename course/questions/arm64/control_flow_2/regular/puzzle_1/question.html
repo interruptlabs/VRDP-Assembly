@@ -7,12 +7,12 @@ Initial values:
 - `x2`: `0xffffffffffb1d00f`
 - `x3`: `24`
 </markdown>
-<pl-code language="gas" style-name="dracula">
+<asm-code language="arm64">
 cmp x1, x2
 csel x0, x1, x2, gt
 cmp x0, x3
 csel x0, x0, x3, gt
-</pl-code>
+</asm-code>
 <pl-integer-input answers-name="x0" label="x0:" base="0"></pl-integer-input>
 </pl-question-panel>
 

@@ -2,7 +2,7 @@
 <markdown>
 What is the value of `lr` after each of the following branches? The program starts in ARM mode.
 </markdown>
-<pl-code language="gas" style-name="dracula">
+<asm-code language="arm32">
 loc_1000:
     blx loc_2000  // Branch 1
     // ...
@@ -21,7 +21,7 @@ loc_4000:
 
 loc_5000:
     // ...
-</pl-code>
+</asm-code>
 <pl-integer-input answers-name="Branch 1" label="Branch 1:" base="0"></pl-integer-input>
 <pl-integer-input answers-name="Branch 2" label="Branch 2:" base="0"></pl-integer-input>
 <pl-integer-input answers-name="Branch 3" label="Branch 3:" base="0"></pl-integer-input>

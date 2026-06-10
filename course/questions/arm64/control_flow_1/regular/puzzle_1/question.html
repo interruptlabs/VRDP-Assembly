@@ -5,7 +5,7 @@ What is the value of `x0` after running the following assembly?
 Initial values:
 - `x1`: `11`
 </markdown>
-<pl-code language="gas" style-name="dracula">
+<asm-code language="arm64">
     movz x2, #1
     movz x3, #1
 
@@ -20,7 +20,7 @@ loop:
 
 break:
     mov x0, x2
-</pl-code>
+</asm-code>
 <pl-integer-input answers-name="x0" label="x0:" base="0"></pl-integer-input>
 </pl-question-panel>
 

@@ -6,7 +6,7 @@ What is the return value of the following calls?
 - `func_0("radio")`
 - `func_0("reviver")`
 </markdown>
-<pl-code language="gas" style-name="dracula">
+<asm-code language="arm32">
 func_0:
     mov r1, #0
 func_0_loop:
@@ -29,7 +29,7 @@ func_1:
     sub r1, r1, #1
     add r0, r0, #1
     b func_1
-</pl-code>
+</asm-code>
 <pl-integer-input answers-name="radio" label="radio:" base="0"></pl-integer-input>
 <pl-integer-input answers-name="reviver" label="reviver:" base="0"></pl-integer-input>
 <pl-integer-input answers-name="radar" label="radar:" base="0"></pl-integer-input>

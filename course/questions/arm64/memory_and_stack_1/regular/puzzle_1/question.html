@@ -12,7 +12,7 @@ Initial values:
 ```
 
 </markdown>
-<pl-code language="gas" style-name="dracula">
+<asm-code language="arm64">
 loop:
     ldp w2, w3, [x1], #8
     cbz w2, end
@@ -21,7 +21,7 @@ loop:
     add w0, w0, w3
     b loop
 end:
-</pl-code>
+</asm-code>
 <pl-integer-input answers-name="x0" label="x0:" base="0"></pl-integer-input>
 </pl-question-panel>
 

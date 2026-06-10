@@ -1,6 +1,6 @@
 import sys
 import argparse
-from . import create_assessment, create_question
+from . import create_assessment, create_question, generate_highlighting
 
 
 def main():
@@ -35,7 +35,11 @@ def main():
                                       help="Question title")
     create_question_parser.add_argument("--type", required=True,
                                       help="Question type (e.g., arm64_write)")
-    
+
+    # Generate highlighting command
+    subparsers.add_parser("generate_highlighting",
+                          help="Regenerate syntax highlighting artifacts from capstone")
+
     args = parser.parse_args()
     
     if args.command == "create_assessment":
@@ -54,6 +58,8 @@ def main():
             title=args.title,
             question_type=args.type
         )
+    elif args.command == "generate_highlighting":
+        generate_highlighting.generate_highlighting()
     else:
         parser.print_help()
 

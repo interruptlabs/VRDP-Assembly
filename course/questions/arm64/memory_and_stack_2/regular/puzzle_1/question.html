@@ -15,7 +15,7 @@ Memory:
 ```
 
 </markdown>
-<pl-code language="gas" style-name="dracula">
+<asm-code language="arm64">
 puzzle:
     stp     x29, x30, [sp, #-16]!
     mov     x29, sp
@@ -42,7 +42,7 @@ puzzle_0:
 puzzle_3:
     ldp     x29, x30, [sp], #16
     ret
-</pl-code>
+</asm-code>
 <pl-integer-input answers-name="When 19" label="When 19:" base="0"></pl-integer-input>
 <pl-integer-input answers-name="When 89" label="When 89:" base="0"></pl-integer-input>
 <pl-integer-input answers-name="When 231" label="When 231:" base="0"></pl-integer-input>
