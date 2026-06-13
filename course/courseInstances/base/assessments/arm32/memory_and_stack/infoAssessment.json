@@ -24,6 +24,14 @@
                     "points": 1
                 },
                 {
+                    "id": "arm32/memory_and_stack/regular/call",
+                    "points": 1
+                },
+                {
+                    "id": "arm32/memory_and_stack/regular/be_called",
+                    "points": 1
+                },
+                {
                     "id": "arm32/memory_and_stack/regular/puzzle_1",
                     "points": 1
                 }
@@ -33,7 +41,7 @@
             "title": "Bonus",
             "questions": [
                 {
-                    "id": "arm32/memory_and_stack/bonus/be_called",
+                    "id": "arm32/memory_and_stack/bonus/be_called_revenge",
                     "points": 1
                 },
                 {

@@ -1,8 +1,8 @@
 {
-    "uuid": "8ecb9a1a-4144-4531-9ce5-ed592a23a3de",
+    "uuid": "2819099d-bc6e-489b-aa5e-8ef2be7c2af4",
     "type": "v3",
-    "title": "Be Called",
-    "topic": "ARM32 - Memory and Stack",
+    "title": "Call",
+    "topic": "X64 - Memory and Stack",
     "gradingMethod": "External",
     "singleVariant": true,
     "showCorrectAnswer": false,

@@ -20,6 +20,10 @@
                     "points": 1
                 },
                 {
+                    "id": "arm64/memory_and_stack_2/regular/be_called",
+                    "points": 1
+                },
+                {
                     "id": "arm64/memory_and_stack_2/regular/puzzle_1",
                     "points": 1
                 }
@@ -29,7 +33,7 @@
             "title": "Bonus",
             "questions": [
                 {
-                    "id": "arm64/memory_and_stack_2/bonus/be_called",
+                    "id": "arm64/memory_and_stack_2/bonus/be_called_revenge",
                     "points": 1
                 },
                 {

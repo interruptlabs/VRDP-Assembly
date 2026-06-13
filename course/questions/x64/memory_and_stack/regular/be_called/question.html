@@ -1,0 +1,23 @@
+<pl-question-panel>
+<markdown>
+Create a function equivalent to the following C code:
+
+```c
+uint64_t be_called(uint64_t a, uint64_t b, uint64_t c, uint64_t d) {
+    return call_me(a, b, c, d) * a;
+}
+```
+</markdown>
+<pl-file-editor
+    file-name="answer.s"
+    ace-mode="ace/mode/assembly_x86"
+    ace-theme="ace/theme/dracula"
+>
+// Enter your code here
+</pl-file-editor>
+</pl-question-panel>
+
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>

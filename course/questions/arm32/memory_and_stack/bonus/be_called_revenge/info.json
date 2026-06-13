@@ -1,8 +1,8 @@
 {
-    "uuid": "387d80be-abbe-40c2-8cb9-6bb3bd7e8ad0",
+    "uuid": "8ecb9a1a-4144-4531-9ce5-ed592a23a3de",
     "type": "v3",
-    "title": "Be Called",
-    "topic": "ARM64 - Memory and Stack 2",
+    "title": "Be Called Revenge",
+    "topic": "ARM32 - Memory and Stack",
     "gradingMethod": "External",
     "singleVariant": true,
     "showCorrectAnswer": false,

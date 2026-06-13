@@ -30,6 +30,14 @@
                 {
                     "id": "x64/memory_and_stack/regular/move_to_memory",
                     "points": 1
+                },
+                {
+                    "id": "x64/memory_and_stack/regular/call",
+                    "points": 1
+                },
+                {
+                    "id": "x64/memory_and_stack/regular/be_called",
+                    "points": 1
                 }
             ]
         },
@@ -37,7 +45,7 @@
             "title": "Bonus",
             "questions": [
                 {
-                    "id": "x64/memory_and_stack/bonus/be_called",
+                    "id": "x64/memory_and_stack/bonus/be_called_revenge",
                     "points": 1
                 },
                 {
