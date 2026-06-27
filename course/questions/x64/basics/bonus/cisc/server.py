@@ -2,7 +2,7 @@ import ast
 
 
 def generate(data):
-    data["correct_answers"]["rax"] = 0x2FEB7
+    data["correct_answers"]["rax"] = 0x2FFB7
 
 
 def grade(data):
