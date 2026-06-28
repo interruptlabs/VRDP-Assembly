@@ -26,7 +26,8 @@ def create_assessment(module, assessment, title, number):
         "number": f"{number_code}-{number}",
         "allowAccess": [
             {
-                "active": True
+                "active": True,
+                "credit": 100
             }
         ],
         "zones": [
