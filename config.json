@@ -1,5 +1,6 @@
 {
     "devMode": false,
+    "externalGradingPullImagesFromDockerHub": false,
     "hasLocalAuth": true,
     "syncCoursesFromDisk": true,
     "localAuthUsers": [
